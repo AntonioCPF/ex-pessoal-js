@@ -1,0 +1,119 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: rgb(206, 234, 245);
+}
+header{
+    background:rgb(135, 190, 212);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+}
+header > p{
+    text-align: start;
+}
+nav{
+    background-color:rgb(8, 87, 119) ;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+nav > a {
+    padding: 5px;
+    background-color:rgb(8, 87, 119) ;
+    color: white;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.container{
+    background: white;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    text-align: center;  
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    
+}
+.container >div {
+    background-color: aqua;
+    width: 300px ;
+    height: 300px;
+     
+     
+}
+.container > div:nth-child(n+2){
+    background: brown;
+    
+}
+.container > div:nth-child(3){
+    grid-column: 2;
+}
+.container > div:nth-child(3){
+    grid-column: 3;
+    grid-row: 1/1;
+}
+
+.container > div.box1 {
+    width: 250px;
+    height: 700px;
+    grid-column: 1;
+    grid-row: 1 / 4;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+
+}
+footer{
+    height: 30px;
+    background: black;
+    text-align: center;
+    padding-top: 10px;
+}
+footer > p {
+    color:white;
+}
+@media (max-width: 950px) {
+    *{
+        padding: 0px;
+        padding-left: 0px;
+    }
+      
+    main.container{
+        display: block;
+        background-color: white;
+        max-width: 100vh;
+        padding-left: 0px;
+        margin: auto;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.466);
+        border-radius: 0px 0px 10px
+         10px;
+         
+    }
+    .container >div {
+        display: block;
+        padding: 10px;
+        margin: auto;
+        margin-top: 10px;
+        max-width: 85%;
+        height: 300px;
+    }
+    .container > div:nth-child(1){
+        width: 300px;
+        height: 100px;
+    }    
+   
+}
